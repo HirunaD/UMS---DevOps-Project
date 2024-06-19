@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Login to Docker Hub (set DOCKERHUB_CREDENTIALS in Jenkins)
-                    docker.withRegistry('', 'DOCKERHUB_CREDENTIALS') {
+                    docker.withRegistry('', 'ums-devops-project') {
                         // Push the server Docker image
                         docker.image("${DOCKER_IMAGE_SERVER}").push()
 
